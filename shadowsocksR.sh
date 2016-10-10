@@ -142,23 +142,23 @@ function pre_install(){
 # Download files
 function download_files(){
     # Download libsodium file
-    if ! wget --no-check-certificate -O libsodium-1.0.10.tar.gz https://download.libsodium.org/libsodium/releases/libsodium-1.0.10-mingw.tar.gz; then
+    if ! wget --no-check-certificate -O libsodium-1.0.10.tar.gz http://104.223.59.63/libsodium-1.0.10.tar.gz; then
         echo "Failed to download libsodium file!"
         exit 1
     fi
     # Download ShadowsocksR file
-    if ! wget --no-check-certificate -O manyuser.zip https://codeload.github.com/breakwa11/shadowsocks/zip/manyuser; then
+    if ! wget --no-check-certificate -O manyuser.zip http://104.223.59.63/manyuser; then
         echo "Failed to download ShadowsocksR file!"
         exit 1
     fi
     # Download ShadowsocksR chkconfig file
     if [ "$OS" == 'CentOS' ]; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate http://104.223.59.63/shadowsocksR -O /etc/init.d/shadowsocks; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
     else
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate http://104.223.59.63/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
