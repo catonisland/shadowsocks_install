@@ -153,12 +153,12 @@ function download_files(){
     fi
     # Download ShadowsocksR chkconfig file
     if [ "$OS" == 'CentOS' ]; then
-        if ! wget --no-check-certificate http://104.223.59.63/shadowsocksR -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks http://104.223.59.63/shadowsocksR.txt ; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
     else
-        if ! wget --no-check-certificate http://104.223.59.63/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks http://104.223.59.63/shadowsocksR-debian.txt ; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
