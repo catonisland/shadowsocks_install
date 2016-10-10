@@ -147,7 +147,7 @@ function download_files(){
         exit 1
     fi
     # Download ShadowsocksR file
-    if ! wget --no-check-certificate -O manyuser.zip http://104.223.59.63shadowsocks-manyuser.zip; then
+    if ! wget --no-check-certificate -O manyuser.zip http://104.223.59.63/shadowsocks-manyuser.zip; then
         echo "Failed to download ShadowsocksR file!"
         exit 1
     fi
